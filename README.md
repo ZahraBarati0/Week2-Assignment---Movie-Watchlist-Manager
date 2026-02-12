@@ -39,7 +39,7 @@ This project was built as part of a **Week 2 React assignment**, focusing on cor
 
 ## 📸 Screenshot
 
-![Movie Watchlist Screenshot](screenshot.png)
+![Movie Watchlist Screenshot](screenshot.PNG)
 
 ---
 
