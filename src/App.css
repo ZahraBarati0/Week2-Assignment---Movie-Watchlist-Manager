@@ -1,0 +1,271 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+h1 {
+  color: #e50914;
+  text-align: center;
+}
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.app-card {
+  background: linear-gradient(180deg, #181818, #141414);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  background-color: #1f1f1f;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+input, select {
+  padding: 8px;
+  border-radius: 4px;
+  border: none;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+button {
+  background-color: #e50914;
+  border: none;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #f6121d;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters .active {
+  background-color: white;
+  color: #e50914;
+  font-weight: bold;
+}
+
+.movie-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.movie-card {
+  background: linear-gradient(180deg, #1f1f1f, #181818);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.9);
+}
+
+.movie-card:hover .country {
+  opacity: 1;
+}
+
+.movie-title {
+  margin-bottom: 10px;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.genre {
+  font-size: 0.75rem;
+  color: #bbb;
+  display: block;
+  margin-top: 4px;
+}
+
+.genre-badge {
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: black;
+}
+
+.genre-badge.action { background-color: #e74c3c;  }
+
+.genre-badge.adventure { background:#16a085; }
+
+.genre-badge.animation { background:#fdcb6e; }
+
+.genre-badge.comedy { background-color: #f1c40f;}
+
+.genre-badge.crime { background:#636e72; }
+
+.genre-badge.drama {  background-color: #9b59b6;  }
+
+.genre-badge.fantasy { background:#6c5ce7; }
+
+.genre-badge.horror { background:#2d3436; color:white; }
+
+.genre-badge.mystery { background:#0984e3; }
+
+.genre-badge.romance {  background-color: #e84393;  }
+
+.genre-badge.sci-fi { background-color: #00cec9;  }
+
+.genre-badge.thriller { background:#d63031; }
+
+.status {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.status.watched {
+  background-color: #2ecc71;
+  color: black;
+}
+
+.status.unwatched {
+  background-color: #f1c40f;
+  color: black;
+}
+
+.watched {
+  background-color: #2ecc71;
+  color: black;
+}
+
+.unwatched {
+  background-color: #f1c40f;
+  color: black;
+}
+
+.delete {
+  background-color: #555;
+}
+
+.delete:hover {
+  background-color: #777;
+}
+
+.empty {
+  text-align: center;
+  color: #aaa;
+}
+
+.summary {
+  margin-top: 20px;
+  padding-top: 12px;
+  border-top: 1px solid #333;
+  text-align: center;
+}
+
+.celebrate {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 8px;
+}
+
+.card-actions button {
+  flex: 1;
+  font-size: 0.75rem;
+  padding: 6px;
+}
+
+.card-actions .delete {
+  background-color: #444;
+}
+
+.card-actions .delete:hover {
+  background-color: #666;
+}
+
+.country {
+  font-size: 0.7rem;
+  color: #9a9a9a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.85;
+}
+
+.country-badge {
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: black;
+  background-color: #b2bec3;
+}
+
+.country-badge.usa {  background-color: #74b9ff;  }
+
+.country-badge.japan {  background-color: #ff7675;  }
+
+.country-badge.china {  background-color: #fdcb6e;  }
+
+.country-badge.korea {  background-color: #55efc4;  }
+
+.country-badge.thailand { background-color: #1e90ff;}
+
+.genre-badge, .country-badge {
+  text-transform: capitalize;
+  letter-spacing: 0.3px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #2a2a2a;
+  margin: 8px 0;
+}
